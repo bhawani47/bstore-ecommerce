@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Backend for BStore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Nodejs",
+    "ExpressJS",
+    "MongoDB"
+  ],
+  "author": "Bhawani Singh",
+  "license": "ISC"
+}
