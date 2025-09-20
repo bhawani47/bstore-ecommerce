@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import { ApiError } from './utils/ApiError.js';
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(cookieParser());
 
 // Main Routes
 app.get('/', (req, res) => {
-  res.json('Hello From The Server');
+  throw new ApiError(401, 'Unauthorized').send(res);
 });
+
 export { app };
