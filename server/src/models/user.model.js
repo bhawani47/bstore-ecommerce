@@ -112,6 +112,9 @@ const UserSchema = new mongoose.Schema(
       enum: ['bronze', 'silver', 'gold', 'platinum'],
       default: 'bronze',
     },
+    refreshToken: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
@@ -140,7 +143,7 @@ UserSchema.methods.generateAccessToken = function () {
   );
 };
 UserSchema.methods.generateRefreshToken = function () {
-  return jwt.sign(
+  const token = jwt.sign(
     {
       _id: this._id,
     },
@@ -149,6 +152,9 @@ UserSchema.methods.generateRefreshToken = function () {
       expiresIn: process.env.REFRESH_TOKEN_EXPIRY,
     }
   );
+
+  this.refreshToken = token;
+  return token;
 };
 
 export default mongoose.model('User', UserSchema);

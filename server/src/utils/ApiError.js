@@ -34,4 +34,24 @@ class ApiError extends Error {
   }
 }
 
-export { ApiError };
+class MongoErrorHandler {
+  static handle(err) {
+    if (err.code === 11000) {
+      const field = Object.keys(err.keyValue)[0];
+      return new ApiError(400, `${field} already exists`);
+    }
+
+    if (err.name === 'ValidationError') {
+      const messages = Object.values(err.errors).map((val) => val.message);
+      return new ApiError(400, messages.join(', '));
+    }
+
+    if (err.name === 'CastError') {
+      return new ApiError(400, `Invalid ${err.path}: ${err.value}`);
+    }
+
+    return new ApiError(500, err.message || 'MongoDB Error');
+  }
+}
+
+export { ApiError, MongoErrorHandler };
