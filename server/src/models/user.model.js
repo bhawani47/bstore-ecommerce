@@ -120,8 +120,8 @@ const UserSchema = new mongoose.Schema(
 );
 
 UserSchema.pre('save', async function (next) {
-  if (!this.password.isModified) return next();
-  await bcyrpt.hash(this.password, 10);
+  if (!this.isModified('password')) return next();
+  this.password = await bcyrpt.hash(this.password, 10);
   next();
 });
 
