@@ -28,23 +28,23 @@ app.get('/', (req, res) => {
 });
 app.use('/api/v1/users', userRouter);
 
-app.post('/upload', upload.single('file'), async (req, res) => {
-  try {
-    const localFilePath = req.file?.path;
-    const result = await uploadOnCloudinary(localFilePath);
+// app.post('/upload', upload.single('file'), async (req, res) => {
+//   try {
+//     const localFilePath = req.file?.path;
+//     const result = await uploadOnCloudinary(localFilePath);
 
-    if (!result) {
-      return res.status(500).json({ message: 'Upload failed' });
-    }
+//     if (!result) {
+//       return res.status(500).json({ message: 'Upload failed' });
+//     }
 
-    res.json({
-      message: 'Uploaded successfully',
-      url: result.secure_url,
-      public_id: result.public_id,
-    });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
+//     res.json({
+//       message: 'Uploaded successfully',
+//       url: result.secure_url,
+//       public_id: result.public_id,
+//     });
+//   } catch (err) {
+//     res.status(500).json({ error: err.message });
+//   }
+// });
 
 export { app };
