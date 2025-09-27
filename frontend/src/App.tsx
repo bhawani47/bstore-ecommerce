@@ -1,8 +1,11 @@
-import UserLayout from "./components/layout/UserLayout"
+import UserLayout from './components/layout/UserLayout';
+import PublicRoutes from './routes/PublicRoutes';
 
 const App = () => {
   return (
-    <UserLayout />
-  )
-}
-export default App
+    <>
+      <PublicRoutes />
+    </>
+  );
+};
+export default App;

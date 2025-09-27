@@ -1,11 +1,13 @@
-import Navbar from "../common/Navbar"
+import { Outlet } from 'react-router-dom';
+import Navbar from '../common/Navbar';
+import type { ReactNode } from 'react';
 
-const UserLayout = () => {
+const UserLayout = (): ReactNode => {
   return (
     <main className="min-h-screen w-full bg-bg text-text">
-        
-        <Navbar />
+      <Navbar />
+      <Outlet />
     </main>
-  )
-}
-export default UserLayout
+  );
+};
+export default UserLayout;

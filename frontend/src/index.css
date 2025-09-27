@@ -1,39 +1,228 @@
 @import "tailwindcss";
+body {
+  font-family: "Outfit", sans-serif;
+}
 
 /* Light Theme (default) */
 @theme {
-  --color-bg: #ffffff;
-  --color-surface: #f9f9f9;
-  --color-text: #111111;
-  --color-text-secondary: #333333;
+  /* Base Colors */
+  --color-bg: #fefefe;
+  --color-surface: #f7f9fc;
+  --color-surface-secondary: #eef4f8;
+  --color-surface-hover: #e2eaf2;
 
-  --color-primary: #000000;
-  --color-primary-hover: #222222;
-  --color-secondary: #666666;
+  /* Text Colors */
+  --color-text: #1a1d29;
+  --color-text-secondary: #525866;
+  --color-text-muted: #6b7280;
+  --color-text-disabled: #9ca3af;
 
-  --color-border: #e5e5e5;
+  /* Primary Colors - Rich Purple */
+  --color-primary: #7c3aed;
+  --color-primary-hover: #6d28d9;
+  --color-primary-focus: #8b5cf6;
+  --color-primary-light: #f3f0ff;
+  --color-primary-dark: #5b21b6;
 
-  --color-success: #16a34a;
-  --color-error: #dc2626;
-  --color-info: #2563eb;
+  /* Secondary Colors - Warm Gray */
+  --color-secondary: #64748b;
+  --color-secondary-hover: #475569;
+  --color-secondary-light: #f8fafc;
+
+  /* Accent Colors - Electric Blue */
+  --color-accent: #0ea5e9;
+  --color-accent-hover: #0284c7;
+  --color-accent-light: #e0f2fe;
+
+  /* Border Colors */
+  --color-border: #e5e7eb;
+  --color-border-light: #f3f4f6;
+  --color-border-dark: #d1d5db;
+  --color-border-focus: #7c3aed;
+
+  /* Status Colors */
+  --color-success: #22c55e;
+  --color-success-hover: #16a34a;
+  --color-success-light: #f0fdf4;
+  --color-success-dark: #15803d;
+
+  --color-warning: #f97316;
+  --color-warning-hover: #ea580c;
+  --color-warning-light: #fff7ed;
+  --color-warning-dark: #c2410c;
+
+  --color-error: #ef4444;
+  --color-error-hover: #dc2626;
+  --color-error-light: #fef2f2;
+  --color-error-dark: #b91c1c;
+
+  --color-info: #06b6d4;
+  --color-info-hover: #0891b2;
+  --color-info-light: #ecfeff;
+  --color-info-dark: #0e7490;
+
+  /* Shadow Colors */
+  --color-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  --color-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --color-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --color-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --color-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --color-shadow-colored: 0 10px 15px -3px rgba(124, 58, 237, 0.2),
+    0 4px 6px -4px rgba(124, 58, 237, 0.1);
+
+  /* Glassmorphism */
+  --color-glass: rgba(255, 255, 255, 0.7);
+  --color-glass-border: rgba(255, 255, 255, 0.3);
+  --color-glass-dark: rgba(20, 20, 32, 0.7);
+  --backdrop-blur: blur(12px);
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* Dark Theme */
 .dark {
-  --color-bg: #000000;
-  --color-surface: #111111;
-  --color-text: #ffffff;
-  --color-text-secondary: #cccccc;
+  /* Base Colors */
+  --color-bg: #0a0a0f;
+  --color-surface: #141420;
+  --color-surface-secondary: #1e1e2e;
+  --color-surface-hover: #2a2a3e;
 
-  --color-primary: #ffffff;
-  --color-primary-hover: #dddddd;
-  --color-secondary: #888888;
+  /* Text Colors */
+  --color-text: #fafafa;
+  --color-text-secondary: #d4d4d8;
+  --color-text-muted: #a1a1aa;
+  --color-text-disabled: #71717a;
 
-  --color-border: #333333;
+  /* Primary Colors - Bright Purple */
+  --color-primary: #a855f7;
+  --color-primary-hover: #9333ea;
+  --color-primary-focus: #c084fc;
+  --color-primary-light: #2e1065;
+  --color-primary-dark: #e879f9;
 
-  --color-success: #22c55e;
-  --color-error: #ef4444;
-  --color-info: #3b82f6;
+  /* Secondary Colors */
+  --color-secondary: #a1a1aa;
+  --color-secondary-hover: #d4d4d8;
+  --color-secondary-light: #1e1e2e;
+
+  /* Accent Colors - Bright Cyan */
+  --color-accent: #22d3ee;
+  --color-accent-hover: #06b6d4;
+  --color-accent-light: #083344;
+
+  /* Border Colors */
+  --color-border: #374151;
+  --color-border-light: #2a2a3e;
+  --color-border-dark: #4b5563;
+  --color-border-focus: #a855f7;
+
+  /* Status Colors */
+  --color-success: #4ade80;
+  --color-success-hover: #22c55e;
+  --color-success-light: #052e16;
+  --color-success-dark: #86efac;
+
+  --color-warning: #fb923c;
+  --color-warning-hover: #f97316;
+  --color-warning-light: #431407;
+  --color-warning-dark: #fdba74;
+
+  --color-error: #f87171;
+  --color-error-hover: #ef4444;
+  --color-error-light: #450a0a;
+  --color-error-dark: #fca5a5;
+
+  --color-info: #38bdf8;
+  --color-info-hover: #0ea5e9;
+  --color-info-light: #0c4a6e;
+  --color-info-dark: #7dd3fc;
+
+  /* Shadow Colors */
+  --color-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  --color-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --color-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4),
+    0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --color-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4),
+    0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  --color-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4),
+    0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  --color-shadow-colored: 0 10px 15px -3px rgba(168, 85, 247, 0.3),
+    0 4px 6px -4px rgba(168, 85, 247, 0.2);
+
+  /* Glassmorphism */
+  --color-glass: rgba(10, 10, 15, 0.8);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-glass-light: rgba(255, 255, 255, 0.05);
+  --backdrop-blur: blur(12px);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Focus ring utility */
+.focus-ring {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* Glass effect utility */
+.glass {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+}
+
+/* Gradient utilities */
+.gradient-primary {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-hover)
+  );
+}
+
+.gradient-accent {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-primary)
+  );
+}
+
+.gradient-rainbow {
+  background: linear-gradient(
+    135deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4,
+    #ffeaa7,
+    #dda0dd
+  );
+}
+
+.gradient-sunset {
+  background: linear-gradient(135deg, #ff9a9e, #fecfef, #fecfef);
+}
+
+.gradient-ocean {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-primary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
