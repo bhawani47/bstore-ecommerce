@@ -20,38 +20,7 @@ const MoreButton = () => {
 };
 
 const Home = () => {
-  const cards = [
-    {
-      name: 'Nike air jorden',
-      price: 300,
-      rating: 4.5,
-      image: 'hero_watch.png',
-    },
-    {
-      name: 'Nike air jorden',
-      price: 300,
-      rating: 4.5,
-      image: 'hero_watch.png',
-    },
-    {
-      name: 'Nike air jorden',
-      price: 300,
-      rating: 4.5,
-      image: 'hero_watch.png',
-    },
-    {
-      name: 'Nike air jorden',
-      price: 300,
-      rating: 4.5,
-      image: 'hero_watch.png',
-    },
-    {
-      name: 'Nike air jorden',
-      price: 300,
-      rating: 4.5,
-      image: 'hero_watch.png',
-    },
-  ];
+  
   return (
     <div className="h-full p-5">
       <Hero />
