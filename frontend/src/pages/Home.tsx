@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { Hero } from '../components';
 import Card from '../components/common/Card';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import Newsletter from '../components/home/Newsletter';
+import OurSpecs from '../components/home/OurSpecs';
 
 const MoreButton = () => {
   return (
@@ -81,6 +83,10 @@ const Home = () => {
         </div>
       </div>
       <MoreButton />
+
+      <OurSpecs />
+
+      <Newsletter />
     </div>
   );
 };
