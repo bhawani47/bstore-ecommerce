@@ -1,73 +1,95 @@
-# React + TypeScript + Vite
+# BStore E-commerce Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce frontend built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## 🛠️ Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- TypeScript
+- Vite
+- React Router DOM
+- Context API for state management
 
-## React Compiler
+## 📁 Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── app/
+│   └── context/      # Application context providers
+├── assets/          # Images and static assets
+├── components/
+│   ├── common/      # Reusable components (Navbar, Footer, etc.)
+│   ├── home/        # Home page specific components
+│   └── layout/      # Layout components
+├── pages/           # Page components
+├── routes/          # Route configurations
+└── types/           # TypeScript type definitions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone the repository
+```bash
+git clone https://github.com/bhawani47/bstore-ecommerce.git
+cd bstore-ecommerce/frontend
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start the development server
+```bash
+npm run dev
+```
+
+4. Build for production
+```bash
+npm run build
+```
+
+## 🔑 Key Features
+
+- Responsive design
+- Theme customization
+- Product catalog
+- Newsletter subscription
+- Modern UI components
+- Type-safe development with TypeScript
+
+## 🎨 Components
+
+### Common Components
+- `Navbar`: Main navigation component
+- `Footer`: Site footer with links and information
+- `Card`: Reusable card component for products
+- `Title`: Customizable title component
+
+### Home Components
+- `Hero`: Hero section with featured products
+- `Newsletter`: Newsletter subscription component
+- `OurSpecs`: Product specifications section
+
+### Layout
+- `UserLayout`: Main layout wrapper for user interface
+
+## 🛠️ Development
+
+- Uses Vite for fast development and building
+- TypeScript for type safety
+- ESLint for code quality
+- Modern React features and hooks
+
+## 📝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details
 ```
