@@ -12,12 +12,7 @@ export interface Store {
   contact: string;
   createdAt: string;
   updatedAt: string;
-  user: {
-    id: string;
-    name: string;
-    email: string;
-    image: string;
-  };
+  user: User;
 }
 
 // export interface Rating {

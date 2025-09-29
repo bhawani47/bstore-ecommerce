@@ -79,7 +79,7 @@ const ThemeToggle = ({
         {/* Background */}
         <div
           className={`absolute inset-0 transition-colors duration-500 ${
-            theme === 'dark' ? 'bg-indigo-600' : 'bg-gray-200'
+            theme === 'dark' ? 'bg-primary-600' : 'bg-gray-200'
           }`}
         />
 
@@ -134,7 +134,7 @@ const Navbar = () => {
             size={23}
             className="transition-transform duration-200 group-hover:scale-110"
           />
-          <button className="absolute -top-2 -right-3 text-xs text-white bg-indigo-500 w-[18px] h-[18px] rounded-full hover:bg-indigo-600 transition-colors duration-200 hover:scale-110 transform">
+          <button className="absolute -top-2 -right-3 text-xs text-white bg-primary-500 w-[18px] h-[18px] rounded-full hover:bg-primary-600 transition-colors duration-200 hover:scale-110 transform">
             3
           </button>
         </div>
@@ -145,7 +145,7 @@ const Navbar = () => {
         </div>
 
         {/* Login Button */}
-        <button className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition-all duration-200 text-white rounded-full hover:shadow-lg transform hover:scale-105">
+        <button className="cursor-pointer px-8 py-2 bg-primary-500 hover:bg-primary-600 transition-all duration-200 text-white rounded-full hover:shadow-lg transform hover:scale-105">
           Login
         </button>
       </div>
@@ -220,7 +220,7 @@ const Navbar = () => {
               className="flex items-center gap-3 py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group"
               onClick={() => setOpen(false)}
             >
-              <div className="w-2 h-2 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="w-2 h-2 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <span
                 className="font-medium"
                 style={{ color: 'var(--color-text)' }}
@@ -234,7 +234,7 @@ const Navbar = () => {
               className="flex items-center gap-3 py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group"
               onClick={() => setOpen(false)}
             >
-              <div className="w-2 h-2 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="w-2 h-2 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <span
                 className="font-medium"
                 style={{ color: 'var(--color-text)' }}
@@ -248,12 +248,12 @@ const Navbar = () => {
               className="flex items-center gap-3 py-3 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group"
               onClick={() => setOpen(false)}
             >
-              <div className="w-2 h-2 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="w-2 h-2 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <span
                 className="font-medium"
                 style={{ color: 'var(--color-text)' }}
               >
-                Services
+                Products
               </span>
             </a>
 
@@ -264,33 +264,7 @@ const Navbar = () => {
             ></div>
 
             {/* Mobile Search */}
-            <div className="py-2">
-              <div
-                className="flex items-center border rounded-lg px-4 py-3 gap-3"
-                style={{
-                  borderColor: 'var(--color-border)',
-                  backgroundColor: 'var(--color-bg)',
-                }}
-              >
-                <BiSearch
-                  size={18}
-                  style={{ color: 'var(--color-text-secondary)' }}
-                />
-                <input
-                  type="text"
-                  placeholder="Search products..."
-                  className="flex-1 outline-none text-sm"
-                  style={{
-                    color: 'var(--color-text)',
-                    backgroundColor: 'transparent',
-                  }}
-                />
-                <BiMicrophone
-                  size={18}
-                  style={{ color: 'var(--color-text-secondary)' }}
-                />
-              </div>
-            </div>
+            <SearchBar />
 
             {/* Mobile Cart */}
             <div
@@ -309,7 +283,7 @@ const Navbar = () => {
                   Shopping Cart
                 </span>
               </div>
-              <div className="bg-indigo-500 text-white text-xs px-2 py-1 rounded-full min-w-[20px] text-center">
+              <div className="bg-primary-500 text-white text-xs px-2 py-1 rounded-full min-w-[20px] text-center">
                 3
               </div>
             </div>
@@ -321,7 +295,7 @@ const Navbar = () => {
             style={{ borderColor: 'var(--color-border)' }}
           >
             <button
-              className="w-full py-3 px-6 bg-indigo-500 hover:bg-indigo-600 transition-all duration-200 text-white rounded-lg font-medium hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]"
+              className="w-full py-3 px-6 bg-primary-500 hover:bg-primary-600 transition-all duration-200 text-white rounded-lg font-medium hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]"
               onClick={() => setOpen(false)}
             >
               Login

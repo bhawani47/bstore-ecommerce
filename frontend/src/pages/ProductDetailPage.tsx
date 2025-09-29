@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { productDummyData } from '../assets/assest';
 import { useParams } from 'react-router-dom';
 import type { Product } from '../types';

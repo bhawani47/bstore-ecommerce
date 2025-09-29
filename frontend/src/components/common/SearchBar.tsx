@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BiMicrophone, BiSearch } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
 
-const SearchBar = () => {
+const SearchBar = ({ className }: { className: string }) => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState<string>('');
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -14,7 +14,9 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex items-center border pr-3 gap-2 bg-bg border-border h-10 rounded-md overflow-hidden max-w-md w-full">
+    <div
+      className={`flex items-center border pr-3 gap-2 bg-bg border-border h-10 rounded-md overflow-hidden max-w-md w-full ${className}`}
+    >
       <input
         type="text"
         placeholder="Search for products"

@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
-import { Hero } from "../components";
-import Card from "../components/common/Card";
-import { FaLongArrowAltRight } from "react-icons/fa";
-import Newsletter from "../components/home/Newsletter";
-import OurSpecs from "../components/home/OurSpecs";
-import { productDummyData } from "../assets/assest";
-import type { Product } from "../types";
+import { Link } from 'react-router-dom';
+import { Hero } from '../components';
+import Card from '../components/common/Card';
+import { FaLongArrowAltRight } from 'react-icons/fa';
+import Newsletter from '../components/home/Newsletter';
+import OurSpecs from '../components/home/OurSpecs';
+import { productDummyData } from '../assets/assest';
+import type { Product } from '../types';
+import SearchBar from '../components/common/SearchBar';
 
-const MoreButton = ({ href = "#" }: { href?: string }) => (
+const MoreButton = ({ href = '#' }: { href?: string }) => (
   <div className="w-full h-10 py-2 flex justify-center items-center mt-6">
     <Link
       to={href}
@@ -54,6 +55,7 @@ const Home = () => {
 
   return (
     <div className="h-full p-5">
+      <SearchBar className='sm:hidden' />
       <Hero />
 
       <ProductGrid title="Featured Products" products={featuredProducts} />
