@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BiMicrophone, BiSearch } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
 
-const SearchBar = ({ className }: { className: string }) => {
+const SearchBar = ({ className }: { className?: string }) => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState<string>('');
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
