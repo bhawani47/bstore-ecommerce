@@ -2,7 +2,9 @@
 body {
   font-family: "Outfit", sans-serif;
 }
-
+*{
+  scrollbar-width: none;
+}
 /* Light Theme (default) */
 @theme {
   /* Base Colors */
@@ -18,6 +20,17 @@ body {
   --color-text-disabled: #9ca3af;
 
   /* Primary Colors - Rich Purple */
+  --color-primary-50: #faf5ff;
+  --color-primary-100: #f3e8ff;
+  --color-primary-200: #e9d5ff;
+  --color-primary-300: #d8b4fe;
+  --color-primary-400: #c084fc;
+  --color-primary-500: #a855f7;
+  --color-primary-600: #9333ea;
+  --color-primary-700: #7e22ce;
+  --color-primary-800: #6b21a8;
+  --color-primary-900: #581c87;
+  --color-primary-950: #3b0764;
   --color-primary: #7c3aed;
   --color-primary-hover: #6d28d9;
   --color-primary-focus: #8b5cf6;
@@ -97,7 +110,17 @@ body {
   --color-text-disabled: #71717a;
 
   /* Primary Colors - Bright Purple */
-  --color-primary: #a855f7;
+  --color-primary-50: #faf5ff;
+  --color-primary-100: #f3e8ff;
+  --color-primary-200: #e9d5ff;
+  --color-primary-300: #d8b4fe;
+  --color-primary-400: #c084fc;
+  --color-primary-500: #a855f7;
+  --color-primary-600: #9333ea;
+  --color-primary-700: #7e22ce;
+  --color-primary-800: #6b21a8;
+  --color-primary-900: #581c87;
+  --color-primary-950: #3b0764;
   --color-primary-hover: #9333ea;
   --color-primary-focus: #c084fc;
   --color-primary-light: #2e1065;

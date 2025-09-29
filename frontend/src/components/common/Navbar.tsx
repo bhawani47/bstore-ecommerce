@@ -2,14 +2,16 @@ import { BiMenu, BiMicrophone, BiSearch } from 'react-icons/bi';
 import { useTheme } from '../../app/context/ThemeContext';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import type { ReactElement } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { CgShoppingCart } from 'react-icons/cg';
 import { useState } from 'react';
+import SearchBar from './SearchBar';
 
 const Logo = () => {
   return (
     <div className="flex items-center space-x-2">
-      <div
+      <Link
+        to={'/'}
         className="font-bold text-3xl bg-gradient-to-r bg-clip-text text-transparent"
         style={{
           backgroundImage:
@@ -17,7 +19,7 @@ const Logo = () => {
         }}
       >
         BCart
-      </div>
+      </Link>
     </div>
   );
 };
@@ -46,32 +48,16 @@ const Menu = (): ReactElement => {
         >
           About
         </a>
-        <a
-          href="#"
+        <NavLink
+          to="/products"
           className="transition-colors duration-200 hover:opacity-80"
           style={{ color: 'var(--color-text-secondary)' }}
         >
-          Services
-        </a>
+          Products
+        </NavLink>
       </div>
       {/* SearchBAR */}
-      <div className="flex items-center border pr-3 gap-2 bg-bg border-border h-10 rounded-md overflow-hidden max-w-md w-full">
-        <input
-          type="text"
-          placeholder="Search for products"
-          className="w-full h-full pl-5 outline-none text-text placeholder-text-secondary text-sm"
-        />
-        <button
-          type="button"
-          className="hover:scale-110 transition-all duration-300"
-        >
-          <BiSearch size={18} />
-        </button>
-        <div className="h-6 w-px bg-gray-500/50"></div>
-        <button type="button" className="hover:scale-110">
-          <BiMicrophone size={18} />
-        </button>
-      </div>
+      <SearchBar />
     </>
   );
 };

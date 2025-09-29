@@ -1,13 +1,15 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from '../common/Navbar';
-import type { ReactNode } from 'react'
+import type { ReactNode } from 'react';
 import Footer from '../common/Footer';
 
 const UserLayout = (): ReactNode => {
   return (
-    <main className="min-h-screen w-full bg-bg text-text">
+    <main className="min-h-screen w-full bg-bg text-text flex flex-col gap-10">
       <Navbar />
-      <Outlet />
+      <section className="min-h-[50vh]" style={{ scrollbarWidth: 'none' }}>
+        <Outlet />
+      </section>
       <Footer />
     </main>
   );
