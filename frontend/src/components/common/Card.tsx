@@ -10,7 +10,7 @@ const Card = ({ cardData }: CardProps) => {
   return (
     <Link
       to={`/products/${id}`}
-      className="flex flex-col bg-white dark:bg-slate-800 text-gray-900 dark:text-gray-100 shadow-lg w-full sm:w-64 md:w-72 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-slate-700"
+      className="flex flex-col bg-bg dark:bg-slate-800 text-gray-900 dark:text-gray-100 shadow-xs w-full md:w-64 lg:w-70 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group border border-gray-200 dark:border-slate-700"
     >
       {/* Product Image */}
       <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-700 dark:to-slate-600">
@@ -46,7 +46,7 @@ const Card = ({ cardData }: CardProps) => {
             )}
           </div>
 
-          <div className="flex flex-col gap-1 sm:gap-2">
+          <div className="flex flex-col sm:flex-row gap-1 sm:gap-2">
             <button className="flex items-center justify-center gap-1 sm:gap-1.5 bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-white px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg transition-all duration-300 hover:bg-primary-100 dark:hover:bg-primary-900/50 hover:scale-105 active:scale-95 text-xs font-medium shadow-sm border border-primary-200 dark:border-primary-800">
               <ShoppingCart size={14} /> Add
             </button>

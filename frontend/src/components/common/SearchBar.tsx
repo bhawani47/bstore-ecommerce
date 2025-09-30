@@ -28,6 +28,7 @@ const SearchBar = ({ className }: { className?: string }) => {
       <button
         type="button"
         className="hover:scale-110 transition-all duration-300"
+        onClick={() => navigate('/products?search=' + searchQuery)}
       >
         <BiSearch size={18} />
       </button>

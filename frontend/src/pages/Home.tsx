@@ -8,7 +8,7 @@ import { productDummyData } from '../assets/assest';
 import type { Product } from '../types';
 import SearchBar from '../components/common/SearchBar';
 
-const MoreButton = ({ href = '#' }: { href?: string }) => (
+const MoreButton = ({ href = '/products' }: { href?: string }) => (
   <div className="w-full h-10 py-2 flex justify-center items-center mt-6">
     <Link
       to={href}
@@ -55,7 +55,7 @@ const Home = () => {
 
   return (
     <div className="h-full p-5">
-      <SearchBar className='sm:hidden' />
+      <SearchBar className="sm:hidden" />
       <Hero />
 
       <ProductGrid title="Featured Products" products={featuredProducts} />

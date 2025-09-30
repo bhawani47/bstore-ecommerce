@@ -5,7 +5,6 @@ import { productDummyData } from '../assets/assest';
 import { useParams } from 'react-router-dom';
 import type { Product } from '../types';
 import Rating from '../components/common/Rating';
-
 const ProductDetailPage = () => {
   const { id } = useParams();
 
@@ -56,14 +55,14 @@ const ProductDetailPage = () => {
 
   return (
     <div
-      className="max-w-6xl w-full px-6 py-4"
+      className="max-w-6xl w-full px-6 py-4 my-6"
       style={{ background: 'var(--color-bg)' }}
     >
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 justify-center items-center lg:items-start">
         {/* Product Images Section */}
-        <div className="flex gap-4 lg:flex-1 max-w-lg">
+        <div className="flex flex-col-reverse lg:flex-row gap-4 lg:flex-1 max-w-lg">
           {/* Thumbnail Images */}
-          <div className="flex flex-row lg:flex-col gap-3 overflow-x-auto lg:overflow-visible">
+          <div className="flex flex-row lg:flex-col gap-3 p-2 overflow-x-auto lg:overflow-visible">
             {product.images.map((image, index) => (
               <button
                 key={index}
